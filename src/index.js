@@ -124,7 +124,6 @@ app.get("/history/date", (request, response) => {
     const { date } = request.query;
   
     const formatedDate = new Date(date).toLocaleDateString();
-    console.log(formatedDate)
     const dates = history.filter(
       ({dated_at}) => dated_at.toLocaleDateString() === formatedDate
     );
